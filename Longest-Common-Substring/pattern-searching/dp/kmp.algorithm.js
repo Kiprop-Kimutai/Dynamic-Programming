@@ -2,9 +2,7 @@ function KMPSearch(string, pattern) {
     let LPS = computeLPS(pattern);
     indices = [];
     let i = 0, j= 0, m = pattern.length, n = string.length;
-    console.log(LPS);
     while(i < n) {
-        console.log(i);
         if(string[i] === pattern[j]) {
             j++;
             i++;
@@ -44,6 +42,6 @@ function computeLPS(pattern) {
     return LPS;
 }
 
-//computeLPS("abcdabklma");
+computeLPS("deep");
 
-KMPSearch('mamaandbabamama', 'mama');
+//KMPSearch('mamaandbabamama', 'mama');
