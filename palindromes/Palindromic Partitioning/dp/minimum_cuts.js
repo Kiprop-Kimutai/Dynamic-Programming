@@ -22,11 +22,11 @@ function palindromicParitions(string) {
             partitions[i] = 0;
         } else {
             for(let j = string.length-2; j>=i; j--) {
-                partitions[i] =  1 + Math.min(partitions[i], partitions[j+1]);
+                partitions[i] =   Math.min(partitions[i], 1 + partitions[j+1]);
             }
         }
     }
     console.log(partitions[0]);
     return partitions[0];
 }
-palindromicParitions('queue');
+palindromicParitions('aab');
